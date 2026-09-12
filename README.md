@@ -1,6 +1,8 @@
-# brake-test
+# Brake Test Data Logger — Baja SAE USB (December 2013)
 
 **Medidor de Aceleraciones en la Punta de Eje** — an axle-tip acceleration logger built to record brake-test data for the **Baja SAE USB** off-road prototype (Universidad Simón Bolívar, División de Electrónica). Designed and tested by Leonardo Ward, December 2013.
+
+![A hand-formed aluminium enclosure bolted to a Baja SAE USB wheel hub, with X, Y and Z axes hand-drawn on it in blue marker and a power switch on the side](Pruebas%20de%20frenos/20131011_155834.jpg)
 
 ## What it does
 
@@ -16,6 +18,8 @@ The intent was to instrument brake tests directly at the axle tip — closer to 
 - **Power:** a single 9 V battery — an `L7805CV` linear regulator supplies 5 V to the Arduino/logger, an `LD33V` supplies 3.3 V to the accelerometer, each with 4.7 nF bypass caps.
 - **Filtering:** each accelerometer axis (X, Y, Z) feeds an external RC low-pass filter (10 kΩ + 1 µF, cutoff ≈ 15.9 Hz) before reaching the ADC, on top of the ADXL335's own internal filter (its 32 kΩ internal resistors + the breakout board's 0.1 µF caps give ≈ 49.7 Hz). A pull-down resistor holds the ATmega's RESET pin, and a bench pushbutton/switch controls logging.
 - **Enclosure:** hand-formed sheet-metal box, with the sensor circuit built on a bakelite perfboard.
+
+![The full kit laid out: an Arduino Uno, an SD card shield with a microSD adapter inserted, the ADXL335 filter perfboard, and a 9V battery with clip](Pruebas%20de%20frenos/IMG_2222.JPG)
 
 See the [bill of materials](Pruebas%20de%20frenos/LISTA%20DE%20COMPONENTES%20MEDIDOR%20DE%20ACELERACIONES%20EN%20LA%20PUNTA%20DE%20EJE.docx) and the [full build report](Pruebas%20de%20frenos/Informe%20Medidor%20de%20Aceleraciones%20en%20las%20Puntas%20de%20Eje.docx) (both in Spanish) for the complete schematic description, component list and calculations.
 
